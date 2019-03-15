@@ -45,6 +45,7 @@
 		AFE220D7223B250100845D47 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220D6223B250100845D47 /* CountryData.swift */; };
 		AFE220DE223B5DD700845D47 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220DC223B5DD600845D47 /* ErrorViewController.swift */; };
 		AFE220DF223B5DD700845D47 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE220DD223B5DD600845D47 /* ErrorViewController.xib */; };
+		AFE220E1223B83EB00845D47 /* ErrorStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFE220E0223B83EB00845D47 /* ErrorStrings.strings */; };
 		DB7BE471F315C67A3DB6E347 /* Pods_ABC_CODE_ABC_CODEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A776B72F0D15BDC22B01C2 /* Pods_ABC_CODE_ABC_CODEUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		AFE220D6223B250100845D47 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		AFE220DC223B5DD600845D47 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		AFE220DD223B5DD600845D47 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
+		AFE220E0223B83EB00845D47 /* ErrorStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ErrorStrings.strings; sourceTree = "<group>"; };
 		DBE191412E50B9AFD09F578A /* Pods-ABC-CODE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BE70A62AE1B53948CDB187 /* Pods_ABC_CODE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -336,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE220C1223AD50100845D47 /* ReachAbilityStrings.strings */,
+				AFE220E0223B83EB00845D47 /* ErrorStrings.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE220E1223B83EB00845D47 /* ErrorStrings.strings in Resources */,
 				AF52F71F2238C5220096BD5F /* LaunchScreen.storyboard in Resources */,
 				AF52F71C2238C5220096BD5F /* Assets.xcassets in Resources */,
 				AFE220DF223B5DD700845D47 /* ErrorViewController.xib in Resources */,

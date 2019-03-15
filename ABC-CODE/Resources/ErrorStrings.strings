@@ -1,0 +1,9 @@
+/* 
+  ErrorStrings.strings
+  ABC-CODE
+
+  Created by Kudzai Mhou on 2019/03/15.
+  Copyright © 2019 Kudzai Mhou. All rights reserved.
+*/
+
+"error.nessage.title" = "Something unexpected occured. Please click try again below.";

@@ -9,22 +9,34 @@
 import UIKit
 
 class ErrorViewController: UIViewController {
-
+    @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var tryAgainImageButton: UIImageView!
+    
+    private let continent: String
+    private var viewModel = ContinentCountriesViewModelImplementation()
+    
+    init(continent: String) {
+        self.continent = continent
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+       return nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpView()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUpView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRetryButtonTapped))
+        tryAgainImageButton.addGestureRecognizer(tapGesture)
+        errorMessage.text = "error.nessage.title".localized(in: .ErrorStrings)
     }
-    */
+    
+    @objc func handleRetryButtonTapped(gesture: UITapGestureRecognizer) {
+        viewModel.tryAgainTapped(continent: continent)
+    }
 
 }
