@@ -1,0 +1,10 @@
+/* 
+  ReachAbilityStrings.strings
+  ABC-CODE
+
+  Created by Kudzai Mhou on 2019/03/14.
+  Copyright © 2019 Kudzai Mhou. All rights reserved.
+*/
+
+"network.reachAbility.alert.title" = "No Internet Connection";
+"network.reachAbility.alert.message" = "Please ensure you are connected to the interenet";
