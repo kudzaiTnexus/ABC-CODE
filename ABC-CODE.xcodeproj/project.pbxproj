@@ -43,8 +43,6 @@
 		AFE220C4223AD54300845D47 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220C3223AD54300845D47 /* UIColor+CustomColors.swift */; };
 		AFE220D5223B242400845D47 /* CountryDataMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220D4223B242400845D47 /* CountryDataMapping.swift */; };
 		AFE220D7223B250100845D47 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220D6223B250100845D47 /* CountryData.swift */; };
-		AFE220DE223B5DD700845D47 /* ErrorViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220DC223B5DD600845D47 /* ErrorViewControllerImplementation.swift */; };
-		AFE220DF223B5DD700845D47 /* ErrorViewControllerImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE220DD223B5DD600845D47 /* ErrorViewControllerImplementation.xib */; };
 		AFE220E1223B83EB00845D47 /* ErrorStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFE220E0223B83EB00845D47 /* ErrorStrings.strings */; };
 		AFE220E4223C05A300845D47 /* ErrorViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220E3223C05A300845D47 /* ErrorViewControllerFactory.swift */; };
 		AFE220E7223C06B000845D47 /* ComposedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220E6223C06B000845D47 /* ComposedViewController.swift */; };
@@ -58,6 +56,8 @@
 		AFE220F8223CBA9B00845D47 /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220F7223CBA9B00845D47 /* AsyncTask.swift */; };
 		AFE220FA223CBABB00845D47 /* AsyncTaskCallbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220F9223CBABB00845D47 /* AsyncTaskCallbacks.swift */; };
 		AFE220FC223CBB0500845D47 /* LoadCountriesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220FB223CBB0500845D47 /* LoadCountriesTask.swift */; };
+		AFE220FF223CE44D00845D47 /* ErrorViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220FD223CE44D00845D47 /* ErrorViewControllerImplementation.swift */; };
+		AFE22100223CE44D00845D47 /* ErrorViewControllerImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE220FE223CE44D00845D47 /* ErrorViewControllerImplementation.xib */; };
 		DB7BE471F315C67A3DB6E347 /* Pods_ABC_CODE_ABC_CODEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A776B72F0D15BDC22B01C2 /* Pods_ABC_CODE_ABC_CODEUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,8 +126,6 @@
 		AFE220C3223AD54300845D47 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		AFE220D4223B242400845D47 /* CountryDataMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataMapping.swift; sourceTree = "<group>"; };
 		AFE220D6223B250100845D47 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
-		AFE220DC223B5DD600845D47 /* ErrorViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerImplementation.swift; sourceTree = "<group>"; };
-		AFE220DD223B5DD600845D47 /* ErrorViewControllerImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewControllerImplementation.xib; sourceTree = "<group>"; };
 		AFE220E0223B83EB00845D47 /* ErrorStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ErrorStrings.strings; sourceTree = "<group>"; };
 		AFE220E3223C05A300845D47 /* ErrorViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerFactory.swift; sourceTree = "<group>"; };
 		AFE220E6223C06B000845D47 /* ComposedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +139,8 @@
 		AFE220F7223CBA9B00845D47 /* AsyncTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
 		AFE220F9223CBABB00845D47 /* AsyncTaskCallbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncTaskCallbacks.swift; sourceTree = "<group>"; };
 		AFE220FB223CBB0500845D47 /* LoadCountriesTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCountriesTask.swift; sourceTree = "<group>"; };
+		AFE220FD223CE44D00845D47 /* ErrorViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerImplementation.swift; sourceTree = "<group>"; };
+		AFE220FE223CE44D00845D47 /* ErrorViewControllerImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewControllerImplementation.xib; sourceTree = "<group>"; };
 		DBE191412E50B9AFD09F578A /* Pods-ABC-CODE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BE70A62AE1B53948CDB187 /* Pods_ABC_CODE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -383,10 +383,10 @@
 		AFE220E2223C054D00845D47 /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
-				AFE220DC223B5DD600845D47 /* ErrorViewControllerImplementation.swift */,
-				AFE220DD223B5DD600845D47 /* ErrorViewControllerImplementation.xib */,
 				AFE220E3223C05A300845D47 /* ErrorViewControllerFactory.swift */,
 				AFE220EC223CAB4700845D47 /* ErrorView.swift */,
+				AFE220FD223CE44D00845D47 /* ErrorViewControllerImplementation.swift */,
+				AFE220FE223CE44D00845D47 /* ErrorViewControllerImplementation.xib */,
 			);
 			path = ErrorView;
 			sourceTree = "<group>";
@@ -524,11 +524,11 @@
 				AFE220E1223B83EB00845D47 /* ErrorStrings.strings in Resources */,
 				AF52F71F2238C5220096BD5F /* LaunchScreen.storyboard in Resources */,
 				AF52F71C2238C5220096BD5F /* Assets.xcassets in Resources */,
-				AFE220DF223B5DD700845D47 /* ErrorViewControllerImplementation.xib in Resources */,
 				AFE220C2223AD50100845D47 /* ReachAbilityStrings.strings in Resources */,
 				AF52F71A2238C51F0096BD5F /* Main.storyboard in Resources */,
 				AFE220B4223AAEB900845D47 /* CountriesViewController.xib in Resources */,
 				AFE220B8223AB21D00845D47 /* CountryTableViewCell.xib in Resources */,
+				AFE22100223CE44D00845D47 /* ErrorViewControllerImplementation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +707,7 @@
 				AFE220B7223AB21D00845D47 /* CountryTableViewCell.swift in Sources */,
 				AFE220D7223B250100845D47 /* CountryData.swift in Sources */,
 				AFE220EB223CAB3300845D47 /* ProgressView.swift in Sources */,
-				AFE220DE223B5DD700845D47 /* ErrorViewControllerImplementation.swift in Sources */,
+				AFE220FF223CE44D00845D47 /* ErrorViewControllerImplementation.swift in Sources */,
 				AF52F765223918080096BD5F /* AppDependencies.swift in Sources */,
 				AFE220BD223AD40800845D47 /* Localizable+Extension.swift in Sources */,
 				AF52F74C2238DAFC0096BD5F /* ContinentData.swift in Sources */,

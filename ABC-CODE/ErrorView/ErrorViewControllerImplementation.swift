@@ -1,8 +1,8 @@
 //
-//  ErrorViewController.swift
+//  ErrorViewControllerImplementation.swift
 //  ABC-CODE
 //
-//  Created by Kudzai Mhou on 2019/03/15.
+//  Created by Kudzai Mhou on 2019/03/16.
 //  Copyright © 2019 Kudzai Mhou. All rights reserved.
 //
 
@@ -12,7 +12,6 @@ protocol ErrorViewController: ComposedViewController {}
 
 class ErrorViewControllerImplementation: UIViewController, ErrorViewController {
     @IBOutlet weak var errorMessage: UILabel!
-    @IBOutlet weak var tryAgainImageButton: UIImageView!
     
     private let errorNotificationMessage: String
     private let onTryAgain: () -> Void
@@ -28,22 +27,20 @@ class ErrorViewControllerImplementation: UIViewController, ErrorViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-       return nil
+        return nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
-
+    
     func setUpView() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRetryButtonTapped))
-        tryAgainImageButton.addGestureRecognizer(tapGesture)
         errorMessage.text = errorNotificationMessage
     }
     
-    @objc func handleRetryButtonTapped(gesture: UITapGestureRecognizer) {
+    @IBAction func retryButtonTap(_ sender: UIButton) {
         onTryAgain()
     }
-
 }
+

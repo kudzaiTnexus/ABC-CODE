@@ -34,16 +34,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type a continent name to get cool information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11D-6s-qiT">
-                                <rect key="frame" x="46" y="413" width="323" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="zoQ-qK-mZw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter continent name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VjE-tD-Vhh">
-                                <rect key="frame" x="60" y="489" width="292" height="30"/>
+                                <rect key="frame" x="50" y="489" width="314" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FHE-Sc-vTp"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -55,7 +50,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-MX-0G0">
-                                <rect key="frame" x="60" y="570" width="292" height="40"/>
+                                <rect key="frame" x="50" y="580" width="314" height="40"/>
                                 <color key="backgroundColor" red="0.88763086930000001" green="0.76077783900124796" blue="0.096924773078202089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="W5R-oq-qQ1"/>
@@ -74,21 +69,29 @@
                                     <action selector="getFactsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66o-VD-wEx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type a continent name to get cool information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11D-6s-qiT">
+                                <rect key="frame" x="46" y="437" width="323" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="zoQ-qK-mZw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.079117318472040066" green="0.75648500180676459" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VjE-tD-Vhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="3bm-rJ-aaB"/>
+                            <constraint firstItem="VjE-tD-Vhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="3bm-rJ-aaB"/>
                             <constraint firstItem="VjE-tD-Vhh" firstAttribute="top" secondItem="11D-6s-qiT" secondAttribute="bottom" constant="30" id="7xe-v9-iCX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsh-MX-0G0" secondAttribute="trailing" constant="62" id="CS9-Fe-bHk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VjE-tD-Vhh" secondAttribute="trailing" constant="62" id="IHT-Ns-Ilr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dsh-MX-0G0" secondAttribute="trailing" constant="50" id="CS9-Fe-bHk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VjE-tD-Vhh" secondAttribute="trailing" constant="50" id="IHT-Ns-Ilr"/>
                             <constraint firstItem="11D-6s-qiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="LJt-35-vJD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JLY-ZT-Si6" secondAttribute="trailing" constant="62" id="MBZ-F8-9vw"/>
                             <constraint firstItem="JLY-ZT-Si6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Qvh-Nj-Olx"/>
-                            <constraint firstItem="dsh-MX-0G0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="TLt-r5-VKh"/>
+                            <constraint firstItem="dsh-MX-0G0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="TLt-r5-VKh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="11D-6s-qiT" secondAttribute="trailing" constant="45" id="YaX-um-yAi"/>
                             <constraint firstItem="JLY-ZT-Si6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="fJT-NQ-WuS"/>
                             <constraint firstItem="dsh-MX-0G0" firstAttribute="top" secondItem="VjE-tD-Vhh" secondAttribute="bottom" constant="51" id="fVf-SH-uLc"/>
-                            <constraint firstItem="11D-6s-qiT" firstAttribute="top" secondItem="JLY-ZT-Si6" secondAttribute="bottom" constant="53" id="nfk-3q-pTj"/>
+                            <constraint firstItem="11D-6s-qiT" firstAttribute="top" secondItem="JLY-ZT-Si6" secondAttribute="bottom" constant="77" id="nfk-3q-pTj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -100,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="41"/>
+            <point key="canvasLocation" x="1150.7246376811595" y="40.848214285714285"/>
         </scene>
     </scenes>
     <resources>

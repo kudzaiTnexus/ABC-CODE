@@ -10,48 +10,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorViewController" customModule="ABC_CODE" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorViewControllerImplementation" customModule="ABC_CODE" customModuleProvider="target">
             <connections>
-                <outlet property="errorMessage" destination="34E-7t-1je" id="R6S-JL-Iv3"/>
-                <outlet property="tryAgainImageButton" destination="IS1-zZ-Axq" id="Bge-ZO-7Aq"/>
+                <outlet property="errorMessage" destination="G6l-3O-wCB" id="dIk-Iw-wfY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ErrorViewControllerImplementation">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tryagain" translatesAutoresizingMaskIntoConstraints="NO" id="IS1-zZ-Axq">
-                    <rect key="frame" x="94" y="265" width="187" height="136"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="136" id="Qm8-cI-LBu"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something unexpected occured. Please click try again below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34E-7t-1je">
-                    <rect key="frame" x="40" y="162" width="295" height="43"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="43" id="Fi6-Bn-6of"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                    <color key="textColor" red="0.0072815956953652689" green="0.0" blue="0.6493496192893401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something unexpected occured. Please click try again below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-3O-wCB">
+                    <rect key="frame" x="40" y="159" width="295" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
+                    <color key="textColor" red="0.0072815956950000003" green="0.0" blue="0.64934961930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUw-CO-gFH">
+                    <rect key="frame" x="58" y="295" width="268" height="44"/>
+                    <color key="backgroundColor" red="0.88763086930000001" green="0.76077783899999996" blue="0.096924773079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ob1-gV-DM0"/>
+                    </constraints>
+                    <state key="normal" title="Retry">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="retryButtonTap:" destination="-1" eventType="touchUpInside" id="LEh-bV-hHQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="34E-7t-1je" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="1tZ-Si-vdC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="34E-7t-1je" secondAttribute="trailing" constant="40" id="Bor-jo-lnR"/>
-                <constraint firstItem="IS1-zZ-Axq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="94" id="CfG-c9-F2J"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IS1-zZ-Axq" secondAttribute="trailing" constant="94" id="J2c-iv-G7D"/>
-                <constraint firstItem="34E-7t-1je" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="142" id="juG-fT-op3"/>
-                <constraint firstItem="IS1-zZ-Axq" firstAttribute="top" secondItem="34E-7t-1je" secondAttribute="bottom" constant="60" id="sUd-8t-swd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CUw-CO-gFH" secondAttribute="trailing" constant="49" id="2qq-UH-5pA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G6l-3O-wCB" secondAttribute="trailing" constant="40" id="Jys-aC-XhE"/>
+                <constraint firstItem="CUw-CO-gFH" firstAttribute="top" secondItem="G6l-3O-wCB" secondAttribute="bottom" constant="97.5" id="LBr-6x-OJP"/>
+                <constraint firstItem="G6l-3O-wCB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="139" id="Nel-tl-8VE"/>
+                <constraint firstItem="G6l-3O-wCB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="kZt-ch-8Xs"/>
+                <constraint firstItem="CUw-CO-gFH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="58" id="ofj-GX-rQF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="138.40000000000001" y="154.27286356821591"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
-    <resources>
-        <image name="tryagain" width="361" height="361"/>
-    </resources>
 </document>

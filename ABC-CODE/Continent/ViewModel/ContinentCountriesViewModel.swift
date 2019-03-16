@@ -18,7 +18,6 @@ class ContinentCountriesViewModelImplementation: ContinentCountriesViewModel {
     
     private weak var view: ViewCountriesView?
     private var countriesByContinent: ContinentData?
-    private let repository = Resolver.resolve(dependency: ContinentCountriesRepository.self)
     private let modelMapping = Resolver.resolve(dependency: CountryDataMapping.self)
     private let continent: String
     private let taskFactory: LoadCountriesDataTaskFactory

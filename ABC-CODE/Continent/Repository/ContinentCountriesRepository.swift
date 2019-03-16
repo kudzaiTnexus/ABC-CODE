@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ContinentCountriesRepository {
-    func getCountriesInformationInContinent(continent: String) throws -> [ContinentData]
+    func getCountriesInformationInContinent(continent: String) throws -> [ContinentData]?
 }
 
 class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
@@ -20,7 +20,7 @@ class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
     private var response: [ContinentData]?
     private let error = NSError()
     
-    func getCountriesInformationInContinent(continent: String) throws -> [ContinentData] {
+    func getCountriesInformationInContinent(continent: String) throws -> [ContinentData]? {
         
         ContinentCountriesRepositoryImplementation.getCountriesInfoLock.lock()
         
@@ -38,7 +38,7 @@ class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
         })
         
         guard let response = response else {
-            throw NSError(domain: error.localizedDescription, code: 401, userInfo: nil)
+           return nil
         }
         
         cache.put(value: response, forKey: continent)
