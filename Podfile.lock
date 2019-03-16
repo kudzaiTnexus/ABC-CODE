@@ -1,28 +1,28 @@
 PODS:
   - Cuckoo (0.12.0)
-  - JTMaterialSpinner (3.0.5)
+  - SVProgressHUD (2.2.5)
   - Swifter (1.4.5)
   - Swinject (2.5.0)
 
 DEPENDENCIES:
   - Cuckoo (= 0.12.0)
-  - JTMaterialSpinner (~> 3.0)
+  - SVProgressHUD
   - Swifter (~> 1.4.5)
   - Swinject (~> 2.5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Cuckoo
-    - JTMaterialSpinner
+    - SVProgressHUD
     - Swifter
     - Swinject
 
 SPEC CHECKSUMS:
   Cuckoo: d30b6c149e52ffbcfe6b4a9543e4627d08947274
-  JTMaterialSpinner: 28a0444186b6b2df4206a77d12f7c9dcbe604958
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 4511005c3563213770f99948aec9f2d81185842c
+PODFILE CHECKSUM: c5e2942af071c048a8b9d279914186defc222e7f
 
 COCOAPODS: 1.5.3

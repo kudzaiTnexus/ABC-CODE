@@ -24,7 +24,6 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something unexpected occured. Please click try again below." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6l-3O-wCB">
                     <rect key="frame" x="40" y="159" width="295" height="38.5"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="16"/>
-                    <color key="textColor" red="0.0072815956950000003" green="0.0" blue="0.64934961930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUw-CO-gFH">

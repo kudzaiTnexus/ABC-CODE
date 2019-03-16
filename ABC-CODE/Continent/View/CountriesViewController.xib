@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="continentName" destination="QT1-PH-b4u" id="Ynr-4d-eax"/>
                 <outlet property="countriesTable" destination="ra8-v3-ipv" id="9se-yJ-9CC"/>
+                <outlet property="mainView" destination="Maz-Sp-sAu" id="MlL-vy-Q2a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,26 +23,41 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ra8-v3-ipv">
-                    <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maz-Sp-sAu">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT1-PH-b4u">
+                            <rect key="frame" x="19" y="18" width="337" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="FbS-1E-u97"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ra8-v3-ipv">
+                            <rect key="frame" x="0.0" y="62" width="375" height="585"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Continent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT1-PH-b4u">
-                    <rect key="frame" x="16" y="33" width="337" height="23"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <constraints>
+                        <constraint firstItem="ra8-v3-ipv" firstAttribute="top" secondItem="QT1-PH-b4u" secondAttribute="bottom" constant="21" id="94c-eH-fvG"/>
+                        <constraint firstAttribute="trailing" secondItem="QT1-PH-b4u" secondAttribute="trailing" constant="19" id="L1B-eB-zWv"/>
+                        <constraint firstItem="QT1-PH-b4u" firstAttribute="top" secondItem="Maz-Sp-sAu" secondAttribute="top" constant="18" id="bTZ-Qt-pvU"/>
+                        <constraint firstItem="ra8-v3-ipv" firstAttribute="leading" secondItem="Maz-Sp-sAu" secondAttribute="leading" id="dxX-OK-7Ty"/>
+                        <constraint firstAttribute="bottom" secondItem="ra8-v3-ipv" secondAttribute="bottom" id="oGM-mg-1lP"/>
+                        <constraint firstItem="QT1-PH-b4u" firstAttribute="leading" secondItem="Maz-Sp-sAu" secondAttribute="leading" constant="19" id="pJc-r0-aO6"/>
+                        <constraint firstAttribute="trailing" secondItem="ra8-v3-ipv" secondAttribute="trailing" id="pr5-FV-4Nl"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QT1-PH-b4u" secondAttribute="trailing" constant="22" id="7VQ-nU-6zC"/>
-                <constraint firstItem="QT1-PH-b4u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="13" id="8F0-ue-F6x"/>
-                <constraint firstItem="ra8-v3-ipv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hx3-CP-YsG"/>
-                <constraint firstItem="ra8-v3-ipv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="LZd-0N-7V1"/>
-                <constraint firstItem="ra8-v3-ipv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aJP-5u-5p3"/>
-                <constraint firstItem="ra8-v3-ipv" firstAttribute="top" secondItem="QT1-PH-b4u" secondAttribute="bottom" constant="18.5" id="ebo-S8-z8V"/>
-                <constraint firstItem="QT1-PH-b4u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ixs-wH-t1P"/>
+                <constraint firstItem="Maz-Sp-sAu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4Ws-c6-vu4"/>
+                <constraint firstItem="Maz-Sp-sAu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="86D-jo-QVG"/>
+                <constraint firstItem="Maz-Sp-sAu" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="L6W-NT-vnj"/>
+                <constraint firstItem="Maz-Sp-sAu" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="zxJ-Sm-VZC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-138.40000000000001" y="131.78410794602701"/>

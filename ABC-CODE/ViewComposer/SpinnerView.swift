@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import JTMaterialSpinner
+import UIKit
+import SVProgressHUD
 
 protocol SpinnerView {
     func showLoader()
@@ -16,17 +17,15 @@ protocol SpinnerView {
 
 class SpinnerViewImplementation: SpinnerView {
     
-    var spinnerView = JTMaterialSpinner()
-    
     func showLoader() {
-        spinnerView.circleLayer.lineWidth = 2.0
-        spinnerView.circleLayer.strokeColor = UIColor.orange.cgColor
-        spinnerView.animationDuration = 30
-        spinnerView.beginRefreshing()
+        let message = "Loading ..."
+        SVProgressHUD.setRingRadius(40)
+        SVProgressHUD.setForegroundColor(UIColor.loaderColor())
+        SVProgressHUD.show(withStatus: message)
     }
     
     func hideLoader() {
-        spinnerView.endRefreshing()
+        SVProgressHUD.dismiss()
     }
 
 }

@@ -58,6 +58,7 @@
 		AFE220FC223CBB0500845D47 /* LoadCountriesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220FB223CBB0500845D47 /* LoadCountriesTask.swift */; };
 		AFE220FF223CE44D00845D47 /* ErrorViewControllerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE220FD223CE44D00845D47 /* ErrorViewControllerImplementation.swift */; };
 		AFE22100223CE44D00845D47 /* ErrorViewControllerImplementation.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFE220FE223CE44D00845D47 /* ErrorViewControllerImplementation.xib */; };
+		AFE22104223D127F00845D47 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE22103223D127F00845D47 /* GeneratedMocks.swift */; };
 		DB7BE471F315C67A3DB6E347 /* Pods_ABC_CODE_ABC_CODEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A776B72F0D15BDC22B01C2 /* Pods_ABC_CODE_ABC_CODEUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +142,7 @@
 		AFE220FB223CBB0500845D47 /* LoadCountriesTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCountriesTask.swift; sourceTree = "<group>"; };
 		AFE220FD223CE44D00845D47 /* ErrorViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerImplementation.swift; sourceTree = "<group>"; };
 		AFE220FE223CE44D00845D47 /* ErrorViewControllerImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewControllerImplementation.xib; sourceTree = "<group>"; };
+		AFE22103223D127F00845D47 /* GeneratedMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		DBE191412E50B9AFD09F578A /* Pods-ABC-CODE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BE70A62AE1B53948CDB187 /* Pods_ABC_CODE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 				367E533FB736E82F42864016 /* Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		622F21F1CBA16FF4A33BC148 /* Frameworks */ = {
@@ -203,7 +206,6 @@
 				AF52F7282238C5220096BD5F /* ABC-CODETests */,
 				AF52F7332238C5220096BD5F /* ABC-CODEUITests */,
 				AF52F7122238C51F0096BD5F /* Products */,
-				0621D9C204ED4907B925E9D9 /* Pods */,
 				622F21F1CBA16FF4A33BC148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -242,6 +244,8 @@
 		AF52F7282238C5220096BD5F /* ABC-CODETests */ = {
 			isa = PBXGroup;
 			children = (
+				0621D9C204ED4907B925E9D9 /* Pods */,
+				AFE22102223D126900845D47 /* Mocks */,
 				AF52F7292238C5220096BD5F /* ABC_CODETests.swift */,
 				AF52F72B2238C5220096BD5F /* Info.plist */,
 			);
@@ -411,6 +415,14 @@
 			path = AsyncTask;
 			sourceTree = "<group>";
 		};
+		AFE22102223D126900845D47 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AFE22103223D127F00845D47 /* GeneratedMocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,6 +454,7 @@
 				AF52F7222238C5220096BD5F /* Frameworks */,
 				AF52F7232238C5220096BD5F /* Resources */,
 				EAB072298EF27FEAAD37F6E9 /* [CP] Embed Pods Frameworks */,
+				AFE22101223D11E800845D47 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -602,7 +615,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ABC-CODE-ABC-CODEUITests/Pods-ABC-CODE-ABC-CODEUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JTMaterialSpinner/JTMaterialSpinner.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 			);
@@ -610,7 +623,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTMaterialSpinner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 			);
@@ -641,6 +654,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AFE22101223D11E800845D47 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./cuckoo.sh\n";
+		};
 		C1E8D401288FDB19B5EC973C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -650,14 +680,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JTMaterialSpinner/JTMaterialSpinner.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTMaterialSpinner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,7 +704,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/JTMaterialSpinner/JTMaterialSpinner.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
 			);
@@ -682,7 +712,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTMaterialSpinner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
 			);
@@ -745,6 +775,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF52F72A2238C5220096BD5F /* ABC_CODETests.swift in Sources */,
+				AFE22104223D127F00845D47 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

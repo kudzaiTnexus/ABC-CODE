@@ -4,7 +4,7 @@ target 'ABC-CODE' do
   use_frameworks!
 
     pod 'Swinject', '~> 2.5.0', :inhibit_warnings => true
-    pod 'JTMaterialSpinner', '~> 3.0'
+    pod 'SVProgressHUD'
 
   target 'ABC-CODETests' do
     pod 'Cuckoo', '0.12.0', :inhibit_warnings => true

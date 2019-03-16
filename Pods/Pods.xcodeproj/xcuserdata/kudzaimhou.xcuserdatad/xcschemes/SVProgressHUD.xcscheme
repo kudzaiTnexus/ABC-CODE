@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7BFF19DBE6702B708BFCC65FD1D3E07B"
-               BlueprintName = "JTMaterialSpinner"
+               BlueprintIdentifier = "17C774D88D733EE032760F2B31DD04A5"
+               BlueprintName = "SVProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "JTMaterialSpinner.framework">
+               BuildableName = "SVProgressHUD.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

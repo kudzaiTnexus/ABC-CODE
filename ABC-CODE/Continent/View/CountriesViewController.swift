@@ -12,6 +12,7 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
     
     @IBOutlet weak var continentName: UILabel!
     @IBOutlet weak var countriesTable: UITableView!
+    @IBOutlet weak var mainView: UIView!
     
     private let progressLoader = Resolver.resolve(dependency: SpinnerView.self)
     private let errorViewControllerFactory = Resolver.resolve(dependency: ErrorViewControllerFactory.self)
@@ -46,10 +47,18 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
         super.viewDidLoad()
         setUpTable()
         setUpView()
+        setUpNavBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.viewWillAppear()
+        mainView.isHidden = true
+    }
+    
+    func setUpNavBar() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.tintColor = UIColor.countryThemeGrey()
     }
 
     func setUpView() {
@@ -90,6 +99,7 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
     func showCountries(continentData: [CountryData]) {
         self.countryInfo = continentData
         self.countriesTable.reloadData()
+        mainView.isHidden = false
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

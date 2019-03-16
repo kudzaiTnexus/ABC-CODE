@@ -7,3 +7,4 @@
 */
 
 "error.nessage.title" = "Something unexpected occured. Please click try again below.";
+"empty.text.message" = "Please enter a continent name";

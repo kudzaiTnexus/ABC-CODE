@@ -33,7 +33,7 @@ class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
         }
         
         let requestParam = ContinentRequestParameter.init(selectedContinent: continent)
-        serviceClient.getContinentCountriesData(continentRequest: requestParam, completion: { (data, error) in
+        serviceClient.getContinentCountriesData(continentRequest: requestParam, completion: { (data, error) in 
             self.response = data
         })
         
