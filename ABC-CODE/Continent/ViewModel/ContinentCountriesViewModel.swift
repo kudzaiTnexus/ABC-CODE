@@ -9,38 +9,81 @@
 import Foundation
 
 protocol ContinentCountriesViewModel {
-    func viewWillAppear(continent: String)
-    func tryAgainTapped(continent: String)
+    func viewWillAppear()
+    func tryAgainTapped()
     func requestCountriesButtonTapped(continent: String)
 }
 
 class ContinentCountriesViewModelImplementation: ContinentCountriesViewModel {
     
+    private weak var view: ViewCountriesView?
     private var countriesByContinent: ContinentData?
     private let repository = Resolver.resolve(dependency: ContinentCountriesRepository.self)
+    private let modelMapping = Resolver.resolve(dependency: CountryDataMapping.self)
+    private let continent: String
+    private let taskFactory: LoadCountriesDataTaskFactory
     
-    func viewWillAppear(continent: String) {
-        requestCountriesButtonTapped(continent: continent)
+    private lazy var asyncTask: AsyncTask = {
+        return taskFactory.createTask(continent: continent, callbacks: self)
+    }()
+    
+    init(view: ViewCountriesView, continent: String, taskFactory: LoadCountriesDataTaskFactory = LoadCountriesDataTaskFactoryImplementation()) {
+        self.view = view
+        self.continent = continent
+        self.taskFactory = taskFactory
     }
     
-    func tryAgainTapped(continent: String) {
-        requestCountriesButtonTapped(continent: continent)
+    func viewWillAppear() {
+        asyncTask.execute()
+    }
+    
+    func tryAgainTapped() {
+        view?.hideErrorView()
+        asyncTask.execute()
     }
     
     func requestCountriesButtonTapped(continent: String) {
-        AsyncRunner.runOnConcurrentThread {  [weak self] in
-            guard let strongSelf = self else {
-                return
+        //self.continent = continent
+        //
+    }
+    
+}
+
+extension ContinentCountriesViewModelImplementation: LoadCountriesTaskCallbacks {
+    
+    func asyncTaskDidStart() {
+        view?.showProgressView()
+    }
+    
+    func asyncTaskDidFinish(withCountries countriesData: [ContinentData]?) {
+        guard let view = view else {
+            return
+        }
+        
+        view.hideProgressView()
+        
+        if let countriesData = countriesData {
+            if countriesData.isEmpty {
+                view.showEmptyState()
+            } else {
+                let data = modelMapping.internalModelMapping(continentData: countriesData)
+                view.showCountries(continentData: data)
             }
-            
-            do {
-                let response = try strongSelf.repository.getCountriesInformationInContinent(continent: continent)
-                strongSelf.countriesByContinent = response
-            } catch let error as NSError {
-                print(error)
-                //  strongSelf.finish(withError: error)
-            }
+        } else {
+            showErrorView()
         }
     }
     
+    func asyncTaskDidFinish(withError error: NSError) {
+        showErrorView()
+    }
+    
+    fileprivate func showErrorView() {
+        guard let view = view else {
+            return
+        }
+        
+        view.hideProgressView()
+        view.showErrorView()
+    }
 }

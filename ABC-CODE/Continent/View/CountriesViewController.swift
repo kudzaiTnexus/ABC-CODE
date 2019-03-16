@@ -8,15 +8,30 @@
 
 import UIKit
 
-class CountriesViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
+class CountriesViewController: UIViewController, ViewCountriesView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var continentName: UILabel!
     @IBOutlet weak var countriesTable: UITableView!
     
-    private let viewModel = ContinentCountriesViewModelImplementation()
+    private let progressLoader = Resolver.resolve(dependency: SpinnerView.self)
+    private let errorViewControllerFactory = Resolver.resolve(dependency: ErrorViewControllerFactory.self)
     private var continentInfo = [ContinentData]()
     private var countryInfo = [CountryData]()
     private let continent: String
+    
+    private lazy var viewModel: ContinentCountriesViewModel = {
+        let viewModelFactory = Resolver.resolve(dependency:ContinentCountriesViewModelFactory.self)
+        return viewModelFactory.createViewModel(view: self, continent: continent)
+    }()
+    
+    private var contentViewController: ComposedViewController? {
+        willSet {
+            newValue?.add(toView: self)
+        }
+        didSet {
+            oldValue?.removeFromView()
+        }
+    }
     
     init(continent: String) {
         self.continent = continent
@@ -34,7 +49,7 @@ class CountriesViewController: UIViewController ,UITableViewDelegate, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.viewWillAppear(continent: continent)
+        viewModel.viewWillAppear()
     }
 
     func setUpView() {
@@ -46,6 +61,39 @@ class CountriesViewController: UIViewController ,UITableViewDelegate, UITableVie
         countriesTable.delegate = self
         countriesTable.dataSource = self
         countriesTable.register(UINib(nibName: CountryTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: "countryCell")
+    }
+    
+    func showErrorView() {
+        contentViewController = errorViewControllerFactory.createViewController {
+            self.viewModel.tryAgainTapped()
+        }
+    }
+    
+    func hideErrorView() {
+        if contentViewController is ErrorViewController {
+            contentViewController = nil
+        }
+    }
+    
+    func showProgressView() {
+        progressLoader.showLoader()
+    }
+    
+    func hideProgressView() {
+        progressLoader.hideLoader()
+    }
+    
+    func showEmptyState() {
+        
+    }
+    
+    func showCountries(continentData: [CountryData]) {
+        self.countryInfo = continentData
+        self.countriesTable.reloadData()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

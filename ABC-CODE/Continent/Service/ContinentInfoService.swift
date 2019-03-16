@@ -10,7 +10,7 @@ import Foundation
 import Swinject
 
 protocol ContinentInfoService {
-    func getContinentCountriesData(continentRequest: ContinentRequestParameter, completion: @escaping (_ continentInfo: ContinentData?, _ error: Error?) -> Void)
+    func getContinentCountriesData(continentRequest: ContinentRequestParameter, completion: @escaping (_ continentInfo: [ContinentData]?, _ error: Error?) -> Void)
 }
 
 class ContinentInfoServiceImplementantion: ContinentInfoService {
@@ -18,7 +18,7 @@ class ContinentInfoServiceImplementantion: ContinentInfoService {
     private let continentDataBaseURL = "https://restcountries.eu/rest/v2/region/"
     private let service = Resolver.resolve(dependency: ServiceClient.self)
     
-    func getContinentCountriesData(continentRequest: ContinentRequestParameter, completion: @escaping (_ continentInfo: ContinentData?, _ error: Error?) -> Void) {
+    func getContinentCountriesData(continentRequest: ContinentRequestParameter, completion: @escaping (_ continentInfo: [ContinentData]?, _ error: Error?) -> Void) {
         
         let continentsDataUrl = continentDataBaseURL + continentRequest.continent
         
@@ -32,11 +32,11 @@ class ContinentInfoServiceImplementantion: ContinentInfoService {
         }
     }
     
-    private func createContinentObjectWith(json: Data, completion: @escaping (_ data: ContinentData?, _ error: Error?) -> Void) {
+    private func createContinentObjectWith(json: Data, completion: @escaping (_ data: [ContinentData]?, _ error: Error?) -> Void) {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let continent = try decoder.decode(ContinentData.self, from: json)
+            let continent = try decoder.decode([ContinentData].self, from: json)
             return completion(continent, nil)
         } catch let error {
             return completion(nil, error)

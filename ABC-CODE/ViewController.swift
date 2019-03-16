@@ -31,11 +31,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func getFactsButtonAction(_ sender: UIButton) {
         if let continentName = continentNameTextField.text, let networkReachAbility = reachAble {
-            if networkReachAbility.isInternetAvailable() {
+            //if networkReachAbility.isInternetAvailable() {
                 self.initiateNavigationFlow(continentName: continentName)
-            } else {
-                showNoInternetAlert()
-            }
+            //} else {
+                //showNoInternetAlert()
+            //}
         }
     }
     

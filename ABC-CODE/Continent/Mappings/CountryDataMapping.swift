@@ -8,8 +8,12 @@
 
 import Foundation
 
-class CountryDataMapping {
-    func interNalModelMapping(continentData: [ContinentData]) -> [CountryData] {
+protocol CountryDataMapping {
+    func internalModelMapping(continentData: [ContinentData]) -> [CountryData]
+}
+
+class CountryDataMappingImplementation: CountryDataMapping {
+    func internalModelMapping(continentData: [ContinentData]) -> [CountryData] {
         return  continentData.compactMap({ $0 })
             .map{ CountryData(continentCountryInfo: $0) }
     }
