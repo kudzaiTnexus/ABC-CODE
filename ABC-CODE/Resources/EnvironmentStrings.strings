@@ -1,0 +1,9 @@
+/* 
+  EnvironmentStrings.strings
+  ABC-CODE
+
+  Created by Kudzai Mhou on 2019/03/17.
+  Copyright © 2019 Kudzai Mhou. All rights reserved.
+*/
+"select.env.title" = "Select Environment";
+"select.env.message" = "Please select application environment to fetch data from";

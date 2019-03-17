@@ -7,4 +7,4 @@
 */
 
 "network.reachAbility.alert.title" = "No Internet Connection";
-"network.reachAbility.alert.message" = "Please ensure you are connected to the interenet";
+"network.reachAbility.alert.message" = "Please ensure you are connected to the internet";

@@ -1,32 +1,46 @@
 PODS:
+  - CocoaLumberjack (3.5.1):
+    - CocoaLumberjack/Core (= 3.5.1)
+  - CocoaLumberjack/Core (3.5.1)
   - Cuckoo (0.12.0)
-  - Kingfisher (4.10.1)
+  - SDWebImage/Core (5.0.0-beta5)
+  - SDWebImageSVGCoder (0.1.0):
+    - SDWebImage/Core (>= 5.0.0-beta3)
+    - SVGKit (>= 2.1)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
   - SVProgressHUD (2.2.5)
   - Swifter (1.4.5)
   - Swinject (2.5.0)
 
 DEPENDENCIES:
   - Cuckoo (= 0.12.0)
-  - Kingfisher (~> 4.0)
+  - SDWebImageSVGCoder
   - SVProgressHUD
   - Swifter (~> 1.4.5)
   - Swinject (~> 2.5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
     - Cuckoo
-    - Kingfisher
+    - SDWebImage
+    - SDWebImageSVGCoder
+    - SVGKit
     - SVProgressHUD
     - Swifter
     - Swinject
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 2101f8a5508197a305e737d16c5c2e9e2157628c
   Cuckoo: d30b6c149e52ffbcfe6b4a9543e4627d08947274
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  SDWebImage: fd609df53c0f55fdcd4705bd14c01c9d5c348d0c
+  SDWebImageSVGCoder: 4a76d483b2f8b416b6888c33422f581d1c90e340
+  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 81a38fb1772106fef90527f38ad79cfca54dd0e2
+PODFILE CHECKSUM: 279ed38a1a57493219b297a48cc702684fb3124b
 
 COCOAPODS: 1.5.3

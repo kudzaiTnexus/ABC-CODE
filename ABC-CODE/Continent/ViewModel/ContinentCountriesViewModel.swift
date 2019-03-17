@@ -11,7 +11,7 @@ import Foundation
 protocol ContinentCountriesViewModel {
     func viewWillAppear()
     func tryAgainTapped()
-    func requestCountriesButtonTapped(continent: String)
+    func showCountryDetailedInfo(country: CountryData)
 }
 
 class ContinentCountriesViewModelImplementation: ContinentCountriesViewModel {
@@ -19,6 +19,7 @@ class ContinentCountriesViewModelImplementation: ContinentCountriesViewModel {
     private weak var view: ViewCountriesView?
     private var countriesByContinent: ContinentData?
     private let modelMapping = Resolver.resolve(dependency: CountryDataMapping.self)
+    private let flowController = Resolver.resolve(dependency: FlowViewController.self)
     private let continent: String
     private let taskFactory: LoadCountriesDataTaskFactory
     
@@ -41,9 +42,9 @@ class ContinentCountriesViewModelImplementation: ContinentCountriesViewModel {
         asyncTask.execute()
     }
     
-    func requestCountriesButtonTapped(continent: String) {
-        //self.continent = continent
-        //
+    func showCountryDetailedInfo(country: CountryData) {
+        let countryDetailsViewController = CountryViewController(countryDetails: country)
+        flowController.pushToNavigationStack(viewController: countryDetailsViewController)
     }
     
 }

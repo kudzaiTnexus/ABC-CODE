@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SDWebImageSVGCoder
 
 class CountriesViewController: UIViewController, ViewCountriesView, UITableViewDelegate, UITableViewDataSource {
     
@@ -103,10 +103,6 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
         mainView.isHidden = false
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countryInfo.count
     }
@@ -116,9 +112,20 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
                 return UITableViewCell()
         }
         
-        cell.flagImageView.kf.indicatorType = .activity
-        cell.flagImageView.kf.setImage(with: URL(string: countryInfo[indexPath.row].flag), placeholder: #imageLiteral(resourceName: "placeholder"))
+        let SVGCoder = SDImageSVGCoder.shared
+        let SVGImageSize = CGSize(width: 90, height: 70)
+        SDImageCodersManager.shared.addCoder(SVGCoder)
+        
+        cell.flagImageView.sd_setImage(with: URL(string: countryInfo[indexPath.row].flag), placeholderImage: nil, options: [], context: [.svgImageSize : SVGImageSize])
         cell.setViewWithData(country: countryInfo[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        viewModel.showCountryDetailedInfo(country: countryInfo[indexPath.row])
+        
+        let countryDetailsViewController = CountryViewController(countryDetails: countryInfo[indexPath.row])
+        self.navigationController?.pushViewController(countryDetailsViewController, animated: true)
+    }
+    
 }

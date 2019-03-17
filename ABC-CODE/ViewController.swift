@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var continentNameTextField: UITextField!
     @IBOutlet weak var getFactsButton: UIButton!
     @IBOutlet weak var emptyStringErrorLabel: UILabel!
+    @IBOutlet weak var applicationEnvironmentButton: UIButton!
     
     private let reachAble: Reachability? = Reachability()
     
@@ -34,6 +35,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         emptyStringErrorLabel.isHidden = true
+    }
+    
+    @IBAction func SelectApplicationEnvironment(_ sender: Any) {
+        
+        let actions = selectApplicationEnvironment()
+        Alerts.showActionsheet(viewController: self,
+                               title: "select.env.title".localized(in: .EnvironmentStrings),
+                               message: "select.env.message".localized(in: .EnvironmentStrings),
+                               actions: actions) { (index) in
+            if(index == 0){
+                 AppEnvironment.sharedInstance.devEnv = true
+                self.applicationEnvironmentButton.setImage(UIImage(named: "dev"), for: UIControlState.normal)
+            }else{
+                 AppEnvironment.sharedInstance.devEnv = false
+                 self.applicationEnvironmentButton.setImage(UIImage(named: "prodn"), for: UIControlState.normal)
+            }
+        }
+       
     }
     
     @IBAction func getFactsButtonAction(_ sender: UIButton) {
@@ -62,6 +81,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func selectApplicationEnvironment() -> [(String, UIAlertActionStyle)] {
+        var actions: [(String, UIAlertActionStyle)] = []
+        actions.append(("Dev Environment", UIAlertActionStyle.default))
+        actions.append(("Prod Environment", UIAlertActionStyle.default))
+        return actions
     }
     
 }

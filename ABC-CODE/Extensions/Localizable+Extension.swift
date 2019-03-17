@@ -11,6 +11,7 @@ import Foundation
 enum StringsFile: String {
     case ReachAbilityStrings = "ReachAbilityStrings"
     case ErrorStrings = "ErrorStrings"
+    case EnvironmentStrings = "EnvironmentStrings"
 }
 
 extension Localizable {

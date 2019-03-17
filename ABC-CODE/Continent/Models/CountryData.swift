@@ -15,6 +15,10 @@ struct CountryData {
     var population : Int
     var area : Int
     var flag : String
+    var subRegion : String
+    var currency : [Currency]
+    var language : [Language]
+    var borders : [String]
     
     init(continentCountryInfo: ContinentDatum) {
         
@@ -24,6 +28,10 @@ struct CountryData {
         self.population = continentCountryInfo.population ?? 0
         self.area = continentCountryInfo.area ?? 0
         self.flag = continentCountryInfo.flag ?? ""
+        self.subRegion = continentCountryInfo.subregion ?? ""
+        self.currency = continentCountryInfo.currencies ?? []
+        self.language = continentCountryInfo.languages ?? []
+        self.borders = continentCountryInfo.borders ?? []
     }
 
 }

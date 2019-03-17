@@ -19,6 +19,7 @@ class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
     private static let getCountriesInfoLock = NSLock()
     private var response: ContinentData?
     private let error = NSError()
+    private let mockData = MockData()
     
     func getCountriesInformationInContinent(continent: String) throws -> ContinentData? {
         
@@ -32,11 +33,15 @@ class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
             return cachedCountriesInformation
         }
         
-        let requestParam = ContinentRequestParameter.init(selectedContinent: continent)
-        serviceClient.getContinentCountriesData(continentRequest: requestParam, completion: { (data, error) in 
-            self.response = data
-        })
-        
+        if ( !AppEnvironment.sharedInstance.devEnv ) {
+            let requestParam = ContinentRequestParameter.init(selectedContinent: continent)
+            serviceClient.getContinentCountriesData(continentRequest: requestParam, completion: { (data, error) in
+                self.response = data
+            })
+        } else {
+            response = mockData.countries
+        }
+
         guard let response = response else {
            return nil
         }

@@ -22,6 +22,7 @@ class AppDependencies {
         container.register(depedency: SpinnerView.self, implemenation: { SpinnerViewImplementation() })
         container.register(depedency: ErrorViewControllerFactory.self, implemenation: { ErrorViewControllerFactoryImplementation() })
         container.register(depedency: ContinentCountriesViewModelFactory.self, implemenation: { ContinentCountriesViewModelFactoryImplementation() })
+        container.register(depedency: FlowViewController.self, implemenation: { FlowViewControllerImplementation() })
     }
 }
 
