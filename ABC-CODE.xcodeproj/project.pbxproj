@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		92D5F22E785F0D7B8737552D /* Pods_ABC_CODE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BE70A62AE1B53948CDB187 /* Pods_ABC_CODE.framework */; };
 		937CD90226FF1FEC0E11EDE6 /* Pods_ABC_CODE_ABC_CODETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A388D613F2D79A77BA5B1042 /* Pods_ABC_CODE_ABC_CODETests.framework */; };
+		AF12F723223E1930009A3F60 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF12F722223E1930009A3F60 /* Formatter.swift */; };
+		AF12F725223E1992009A3F60 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF12F724223E1992009A3F60 /* Double+Extension.swift */; };
 		AF52F7152238C51F0096BD5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF52F7142238C51F0096BD5F /* AppDelegate.swift */; };
 		AF52F7172238C51F0096BD5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF52F7162238C51F0096BD5F /* ViewController.swift */; };
 		AF52F71A2238C51F0096BD5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF52F7182238C51F0096BD5F /* Main.storyboard */; };
@@ -87,6 +89,8 @@
 		85A776B72F0D15BDC22B01C2 /* Pods_ABC_CODE_ABC_CODEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE_ABC_CODEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9021E6D8B410603AF96A1D38 /* Pods-ABC-CODE-ABC-CODETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests.debug.xcconfig"; sourceTree = "<group>"; };
 		A388D613F2D79A77BA5B1042 /* Pods_ABC_CODE_ABC_CODETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE_ABC_CODETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF12F722223E1930009A3F60 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		AF12F724223E1992009A3F60 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		AF52F7112238C51F0096BD5F /* ABC-CODE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ABC-CODE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF52F7142238C51F0096BD5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF52F7162238C51F0096BD5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF12F721223E1919009A3F60 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AF12F722223E1930009A3F60 /* Formatter.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		AF52F7082238C51F0096BD5F = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +235,7 @@
 		AF52F7132238C51F0096BD5F /* ABC-CODE */ = {
 			isa = PBXGroup;
 			children = (
+				AF12F721223E1919009A3F60 /* Common */,
 				AFE220E5223C069800845D47 /* ViewComposer */,
 				AFE220E2223C054D00845D47 /* ErrorView */,
 				AFE220C0223AD4C600845D47 /* Resources */,
@@ -363,6 +376,7 @@
 			children = (
 				AFE220BC223AD40800845D47 /* Localizable+Extension.swift */,
 				AFE220C3223AD54300845D47 /* UIColor+CustomColors.swift */,
+				AF12F724223E1992009A3F60 /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -750,6 +764,8 @@
 				AFE220F1223CB5CC00845D47 /* ContinentCountriesViewModelFactory.swift in Sources */,
 				AFE220ED223CAB4700845D47 /* ErrorView.swift in Sources */,
 				AF52F75C2238FA740096BD5F /* ContinentCountriesCache.swift in Sources */,
+				AF12F723223E1930009A3F60 /* Formatter.swift in Sources */,
+				AF12F725223E1992009A3F60 /* Double+Extension.swift in Sources */,
 				AF52F7522238DB410096BD5F /* Translations.swift in Sources */,
 				AF52F75F223905F10096BD5F /* DependencyInjectionContainer.swift in Sources */,
 				AF52F75A2238FA5A0096BD5F /* ContinentCountriesRepository.swift in Sources */,

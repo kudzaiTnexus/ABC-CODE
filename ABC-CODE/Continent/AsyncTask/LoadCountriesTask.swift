@@ -25,7 +25,6 @@ class LoadCountriesTask: AsyncTask {
             guard let strongSelf = self else {
                 return
             }
-            sleep(3)
             do {
                 let response = try strongSelf.repository.getCountriesInformationInContinent(continent: strongSelf.continent)
                 strongSelf.finish(withCountries: response)
@@ -35,7 +34,7 @@ class LoadCountriesTask: AsyncTask {
         }
     }
     
-    private func finish(withCountries countriesData: [ContinentData]?) {
+    private func finish(withCountries countriesData: ContinentData?) {
         AsyncRunner.runOnMainThread { [weak self] in
             self?.callbacks?.asyncTaskDidFinish(withCountries: countriesData)
         }

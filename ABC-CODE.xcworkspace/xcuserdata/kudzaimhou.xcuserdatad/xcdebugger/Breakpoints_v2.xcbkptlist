@@ -20,75 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-            timestampString = "574441184.1582381"
+            timestampString = "574495704.25186"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "execute()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ABC-CODE/Continent/ViewModel/ContinentCountriesViewModel.swift"
-            timestampString = "574424003.604338"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "tryAgainTapped()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ABC-CODE/Continent/ViewModel/ContinentCountriesViewModel.swift"
-            timestampString = "574424003.604393"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewWillAppear()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ABC-CODE/ErrorView/ErrorViewControllerImplementation.swift"
-            timestampString = "574418350.438792"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "retryButtonTap(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-            timestampString = "574441184.158838"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "execute()"
             landmarkType = "7">
             <Locations>
@@ -100,12 +36,12 @@
                   moduleName = "ABC-CODE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-                  timestampString = "574427384.857087"
+                  timestampString = "574493596.831115"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "346">
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "330">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -115,12 +51,92 @@
                   moduleName = "ABC-CODE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-                  timestampString = "574427384.859328"
+                  timestampString = "574493596.847023"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "598">
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "582">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABC-CODE/Continent/Service/CoinAPI.swift"
+            timestampString = "574492569.767902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "convert(currency:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABC-CODE/Continent/Service/CoinAPI.swift"
+            timestampString = "574492569.767982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "convert(currency:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
+            timestampString = "574495704.252075"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "execute()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ABC_CODE.LoadCountriesTask.execute() -&gt; ()"
+                  moduleName = "ABC-CODE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
+                  timestampString = "574493596.868258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "263">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ABC_CODE.LoadCountriesTask.execute() -&gt; ()"
+                  moduleName = "ABC-CODE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
+                  timestampString = "574493596.8794349"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "58">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -30,4 +30,15 @@ extension UIColor
     {
         return UIColor(red: 150.0/255.0, green: 50.0/255.0, blue: 120.0/255.0, alpha:1.0)
     }
+    
+    class func areaGreen() -> UIColor
+    {
+        return UIColor(red: 48.0/255.0, green: 170.0/255.0, blue: 39.0/255.0, alpha:1.0)
+    }
+    
+    class func populationRed() -> UIColor
+    {
+        return UIColor(red: 178.0/255.0, green: 23.0/255.0, blue: 23.0/255.0, alpha:1.0)
+    }
+    
 }

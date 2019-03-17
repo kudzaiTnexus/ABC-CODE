@@ -9,20 +9,20 @@
 import Foundation
 
 protocol ContinentCountriesCache {
-    func getValue(forKey: String) -> [ContinentData]?
-    func put(value: [ContinentData]?, forKey: String)
+    func getValue(forKey: String) -> ContinentData?
+    func put(value: ContinentData?, forKey: String)
     func removeValue(forKey: String)
 }
 
 class ContinentCountriesCacheImplementation: ContinentCountriesCache {
     
-    private var cache: [String: [ContinentData]] = [:]
+    private var cache: [String: ContinentData] = [:]
     
-    func getValue(forKey: String) -> [ContinentData]? {
+    func getValue(forKey: String) -> ContinentData? {
         return cache[forKey]
     }
     
-    func put(value: [ContinentData]?, forKey: String) {
+    func put(value: ContinentData?, forKey: String) {
         cache[forKey] = value
     }
     

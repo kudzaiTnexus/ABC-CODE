@@ -54,7 +54,7 @@ extension ContinentCountriesViewModelImplementation: LoadCountriesTaskCallbacks 
         view?.showProgressView()
     }
     
-    func asyncTaskDidFinish(withCountries countriesData: [ContinentData]?) {
+    func asyncTaskDidFinish(withCountries countriesData: ContinentData?) {
         guard let view = view else {
             return
         }

@@ -10,6 +10,6 @@ import Foundation
 
 protocol LoadCountriesTaskCallbacks: class {
     func asyncTaskDidStart()
-    func asyncTaskDidFinish(withCountries countriesData: [ContinentData]?)
+    func asyncTaskDidFinish(withCountries countriesData: ContinentData?)
     func asyncTaskDidFinish(withError error: NSError)
 }

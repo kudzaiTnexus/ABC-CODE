@@ -15,7 +15,10 @@ protocol ServiceClient {
 class ServiceClientImplementation: ServiceClient {
     
     func getJSONFromURL(urlString: String, completion: @escaping (_ data: Data?, _ error: Error?) -> Void) {
-        guard let url = URL(string: urlString) else {
+        
+        let trimmedString = urlString.trimmingCharacters(in: .whitespaces)
+        
+        guard let url = URL(string: trimmedString) else {
             return
         }
         let urlRequest = URLRequest(url: url)

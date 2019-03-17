@@ -111,10 +111,10 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell( withIdentifier: CountryTableViewCell.reuseIdentifier)
-            as? CountryTableViewCell else {
+        guard let cell =  Bundle.main.loadNibNamed("CountryTableViewCell", owner: self, options: nil)?.first as? CountryTableViewCell else {
                 return UITableViewCell()
         }
+        
         cell.setViewWithData(country: countryInfo[indexPath.row])
         return cell
     }

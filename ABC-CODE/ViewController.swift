@@ -41,7 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             if networkReachAbility.isInternetAvailable() {
                 self.initiateNavigationFlow(continentName: continentName)
             } else {
-                showNoInternetAlert(title: "network.reachAbility.alert.title".localized(in: .ReachAbilityStrings), message: "network.reachAbility.alert.message".localized(in: .ReachAbilityStrings))
+                showNoInternetAlert(title: "network.reachAbility.alert.title".localized(in: .ReachAbilityStrings),
+                                    message: "network.reachAbility.alert.message".localized(in: .ReachAbilityStrings))
             }
         } else {
             emptyStringErrorLabel.isHidden = false

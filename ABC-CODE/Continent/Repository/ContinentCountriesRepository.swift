@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ContinentCountriesRepository {
-    func getCountriesInformationInContinent(continent: String) throws -> [ContinentData]?
+    func getCountriesInformationInContinent(continent: String) throws -> ContinentData?
 }
 
 class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
@@ -17,10 +17,10 @@ class ContinentCountriesRepositoryImplementation: ContinentCountriesRepository {
     private let serviceClient = Resolver.resolve(dependency: ContinentInfoService.self)
     private let cache = Resolver.resolve(dependency: ContinentCountriesCache.self)
     private static let getCountriesInfoLock = NSLock()
-    private var response: [ContinentData]?
+    private var response: ContinentData?
     private let error = NSError()
     
-    func getCountriesInformationInContinent(continent: String) throws -> [ContinentData]? {
+    func getCountriesInformationInContinent(continent: String) throws -> ContinentData? {
         
         ContinentCountriesRepositoryImplementation.getCountriesInfoLock.lock()
         

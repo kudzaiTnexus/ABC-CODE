@@ -9,11 +9,11 @@
 import Foundation
 
 protocol CountryDataMapping {
-    func internalModelMapping(continentData: [ContinentData]) -> [CountryData]
+    func internalModelMapping(continentData: ContinentData) -> [CountryData]
 }
 
 class CountryDataMappingImplementation: CountryDataMapping {
-    func internalModelMapping(continentData: [ContinentData]) -> [CountryData] {
+    func internalModelMapping(continentData: ContinentData) -> [CountryData] {
         return  continentData.compactMap({ $0 })
             .map{ CountryData(continentCountryInfo: $0) }
     }

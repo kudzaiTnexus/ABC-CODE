@@ -18,9 +18,11 @@ class CountryTableViewCell: UITableViewCell {
     
     static let reuseIdentifier = String(describing: CountryTableViewCell.self)
     static let nibName = String(describing: CountryTableViewCell.self)
+    private let formatter = Formatter()
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,16 +30,16 @@ class CountryTableViewCell: UITableViewCell {
     }
     
     func setUpView() {
-        countryArea.textColor = UIColor.countryThemeGrey()
-        countryPopulation.textColor = UIColor.countryThemeGrey()
+        countryArea.textColor = UIColor.areaGreen()
+        countryPopulation.textColor = UIColor.populationRed()
     }
     
     func setViewWithData(country: CountryData) {
         countryName.text = country.name
         capitalCity.text = country.capital
         countryRegion.text = country.region
-        countryPopulation.text = country.population.description
-        countryArea.text = country.area.description
+        countryPopulation.text = formatter.formatIntToString(num: country.population)
+        countryArea.text = formatter.formatIntToString(num: country.area)
     }
     
 }

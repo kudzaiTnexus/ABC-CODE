@@ -15,7 +15,8 @@ struct CountryData {
     var population : Int
     var area : Int
     
-    init(continentCountryInfo: ContinentData) {
+    init(continentCountryInfo: ContinentDatum) {
+        
         self.name = continentCountryInfo.name ?? ""
         self.capital = continentCountryInfo.capital ?? ""
         self.region = continentCountryInfo.region ?? ""
