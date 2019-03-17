@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CountriesViewController: UIViewController, ViewCountriesView, UITableViewDelegate, UITableViewDataSource {
     
@@ -115,6 +116,8 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
                 return UITableViewCell()
         }
         
+        cell.flagImageView.kf.indicatorType = .activity
+        cell.flagImageView.kf.setImage(with: URL(string: countryInfo[indexPath.row].flag), placeholder: #imageLiteral(resourceName: "placeholder"))
         cell.setViewWithData(country: countryInfo[indexPath.row])
         return cell
     }

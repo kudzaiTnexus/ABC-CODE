@@ -83,11 +83,15 @@
 
 /* Begin PBXFileReference section */
 		0A7004160FF7D7F7D9FBEB1F /* Pods-ABC-CODE-ABC-CODETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests.release.xcconfig"; sourceTree = "<group>"; };
+		2DD6CDDC856AE9D7747046FB /* Pods-ABC-CODE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.debug.xcconfig"; sourceTree = "<group>"; };
 		367E533FB736E82F42864016 /* Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODEUITests/Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig"; sourceTree = "<group>"; };
 		36DE5E82A3F4C0E9B849E62D /* Pods-ABC-CODE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.release.xcconfig"; sourceTree = "<group>"; };
 		6C148184F683483E743C7AD9 /* Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODEUITests/Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CEAB4FDF441D1C781A9EFC4 /* Pods-ABC-CODE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.release.xcconfig"; sourceTree = "<group>"; };
+		794AB40BBAE9BCFD35F45FB9 /* Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODEUITests/Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		85A776B72F0D15BDC22B01C2 /* Pods_ABC_CODE_ABC_CODEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE_ABC_CODEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9021E6D8B410603AF96A1D38 /* Pods-ABC-CODE-ABC-CODETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests.debug.xcconfig"; sourceTree = "<group>"; };
+		A18703A6A6F04D496139D072 /* Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODEUITests/Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A388D613F2D79A77BA5B1042 /* Pods_ABC_CODE_ABC_CODETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE_ABC_CODETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF12F722223E1930009A3F60 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		AF12F724223E1992009A3F60 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
@@ -147,7 +151,9 @@
 		AFE220FD223CE44D00845D47 /* ErrorViewControllerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerImplementation.swift; sourceTree = "<group>"; };
 		AFE220FE223CE44D00845D47 /* ErrorViewControllerImplementation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewControllerImplementation.xib; sourceTree = "<group>"; };
 		AFE22103223D127F00845D47 /* GeneratedMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		D67071B98D3F3672418768E0 /* Pods-ABC-CODE-ABC-CODETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODETests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests.release.xcconfig"; sourceTree = "<group>"; };
 		DBE191412E50B9AFD09F578A /* Pods-ABC-CODE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE.debug.xcconfig"; sourceTree = "<group>"; };
+		F2439D35EFBC08CADB3DF223 /* Pods-ABC-CODE-ABC-CODETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC-CODE-ABC-CODETests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7BE70A62AE1B53948CDB187 /* Pods_ABC_CODE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABC_CODE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +185,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F82984A20E3DC0EF909121 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DD6CDDC856AE9D7747046FB /* Pods-ABC-CODE.debug.xcconfig */,
+				6CEAB4FDF441D1C781A9EFC4 /* Pods-ABC-CODE.release.xcconfig */,
+				F2439D35EFBC08CADB3DF223 /* Pods-ABC-CODE-ABC-CODETests.debug.xcconfig */,
+				D67071B98D3F3672418768E0 /* Pods-ABC-CODE-ABC-CODETests.release.xcconfig */,
+				794AB40BBAE9BCFD35F45FB9 /* Pods-ABC-CODE-ABC-CODEUITests.debug.xcconfig */,
+				A18703A6A6F04D496139D072 /* Pods-ABC-CODE-ABC-CODEUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		0621D9C204ED4907B925E9D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +238,7 @@
 				AF52F7332238C5220096BD5F /* ABC-CODEUITests */,
 				AF52F7122238C51F0096BD5F /* Products */,
 				622F21F1CBA16FF4A33BC148 /* Frameworks */,
+				00F82984A20E3DC0EF909121 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -629,6 +649,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ABC-CODE-ABC-CODEUITests/Pods-ABC-CODE-ABC-CODEUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
@@ -637,6 +658,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
@@ -694,6 +716,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ABC-CODE/Pods-ABC-CODE-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
@@ -701,6 +724,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
@@ -718,6 +742,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ABC-CODE-ABC-CODETests/Pods-ABC-CODE-ABC-CODETests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
@@ -726,6 +751,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",

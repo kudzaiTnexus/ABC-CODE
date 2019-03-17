@@ -1,11 +1,13 @@
 PODS:
   - Cuckoo (0.12.0)
+  - Kingfisher (4.10.1)
   - SVProgressHUD (2.2.5)
   - Swifter (1.4.5)
   - Swinject (2.5.0)
 
 DEPENDENCIES:
   - Cuckoo (= 0.12.0)
+  - Kingfisher (~> 4.0)
   - SVProgressHUD
   - Swifter (~> 1.4.5)
   - Swinject (~> 2.5.0)
@@ -13,16 +15,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Cuckoo
+    - Kingfisher
     - SVProgressHUD
     - Swifter
     - Swinject
 
 SPEC CHECKSUMS:
   Cuckoo: d30b6c149e52ffbcfe6b4a9543e4627d08947274
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: c5e2942af071c048a8b9d279914186defc222e7f
+PODFILE CHECKSUM: 81a38fb1772106fef90527f38ad79cfca54dd0e2
 
 COCOAPODS: 1.5.3

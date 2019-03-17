@@ -5,6 +5,7 @@ target 'ABC-CODE' do
 
     pod 'Swinject', '~> 2.5.0', :inhibit_warnings => true
     pod 'SVProgressHUD'
+    pod 'Kingfisher', '~> 4.0'
 
   target 'ABC-CODETests' do
     pod 'Cuckoo', '0.12.0', :inhibit_warnings => true

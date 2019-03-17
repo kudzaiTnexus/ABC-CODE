@@ -19,54 +19,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-            timestampString = "574495704.25186"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "execute()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in ABC_CODE.LoadCountriesTask.execute() -&gt; ()"
-                  moduleName = "ABC-CODE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-                  timestampString = "574493596.831115"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "330">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in ABC_CODE.LoadCountriesTask.execute() -&gt; ()"
-                  moduleName = "ABC-CODE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-                  timestampString = "574493596.847023"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "582">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ABC-CODE/Continent/Service/CoinAPI.swift"
             timestampString = "574492569.767902"
             startingColumnNumber = "9223372036854775807"
@@ -99,46 +51,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-            timestampString = "574495704.252075"
+            filePath = "ABC-CODE/Continent/View/CountriesViewController.swift"
+            timestampString = "574505859.8287309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "execute()"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ABC_CODE.LoadCountriesTask.execute() -&gt; ()"
-                  moduleName = "ABC-CODE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-                  timestampString = "574493596.868258"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "263">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in ABC_CODE.LoadCountriesTask.execute() -&gt; ()"
-                  moduleName = "ABC-CODE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kudzaimhou/Documents/IVOptions/ABC-CODE/ABC-CODE/Continent/AsyncTask/LoadCountriesTask.swift"
-                  timestampString = "574493596.8794349"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "58">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

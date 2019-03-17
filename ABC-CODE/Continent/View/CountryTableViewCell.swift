@@ -15,6 +15,7 @@ class CountryTableViewCell: UITableViewCell {
     @IBOutlet weak var countryRegion: UILabel!
     @IBOutlet weak var countryPopulation: UILabel!
     @IBOutlet weak var countryArea: UILabel!
+    @IBOutlet weak var flagImageView: UIImageView!
     
     static let reuseIdentifier = String(describing: CountryTableViewCell.self)
     static let nibName = String(describing: CountryTableViewCell.self)
