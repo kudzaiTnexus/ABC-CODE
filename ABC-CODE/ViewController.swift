@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         emptyStringErrorLabel.isHidden = true
+        emptyStringErrorLabel.isHidden = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -44,25 +44,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                title: "select.env.title".localized(in: .EnvironmentStrings),
                                message: "select.env.message".localized(in: .EnvironmentStrings),
                                actions: actions) { (index) in
-            if(index == 0){
-                 AppEnvironment.sharedInstance.devEnv = true
-                self.applicationEnvironmentButton.setImage(UIImage(named: "dev"), for: UIControlState.normal)
-            }else{
-                 AppEnvironment.sharedInstance.devEnv = false
-                 self.applicationEnvironmentButton.setImage(UIImage(named: "prodn"), for: UIControlState.normal)
-            }
+                                if(index == 0){
+                                    AppEnvironment.sharedInstance.devEnv = true
+                                    self.applicationEnvironmentButton.setImage(UIImage(named: "dev"), for: UIControlState.normal)
+                                }else{
+                                    AppEnvironment.sharedInstance.devEnv = false
+                                    self.applicationEnvironmentButton.setImage(UIImage(named: "prodn"), for: UIControlState.normal)
+                                }
         }
-       
+        
     }
     
     @IBAction func getFactsButtonAction(_ sender: UIButton) {
         if let continentName = continentNameTextField.text, !continentName.isEmpty, let networkReachAbility = reachAble {
-            if networkReachAbility.isInternetAvailable() {
+            
+            if (AppEnvironment.sharedInstance.devEnv) {
                 self.initiateNavigationFlow(continentName: continentName)
-            } else {
-                showNoInternetAlert(title: "network.reachAbility.alert.title".localized(in: .ReachAbilityStrings),
-                                    message: "network.reachAbility.alert.message".localized(in: .ReachAbilityStrings))
+            }else {
+                if networkReachAbility.isInternetAvailable() {
+                    self.initiateNavigationFlow(continentName: continentName)
+                } else {
+                    showNoInternetAlert(title: "network.reachAbility.alert.title".localized(in: .ReachAbilityStrings),
+                                        message: "network.reachAbility.alert.message".localized(in: .ReachAbilityStrings))
+                }
             }
+            
         } else {
             emptyStringErrorLabel.isHidden = false
         }
