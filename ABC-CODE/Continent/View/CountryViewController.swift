@@ -41,12 +41,11 @@ class CountryViewController: UIViewController {
     }
     
     func addSubView() {
-//        let countryDetailsView = CountryDetailsView()
-//        countryDetailsView.setViewWithData(country: countryDetails)
-//        guard let nibView = Bundle.main.loadNibNamed("CountryDetailsView", owner: self, options: nil)?.first as? CountryDetailsView else {
-//            return
-//        }
-//        countryInfoViewPlaceHolder.addSubview(nibView)
+        guard let nibView = Bundle.main.loadNibNamed("CountryDetailsView", owner: self, options: nil)?.first as? CountryDetailsView else {
+            return
+        }
+        nibView.setViewWithData(country: countryDetails)
+        countryInfoViewPlaceHolder.addSubview(nibView)
     }
     
     func showFlag(flagUrl: String) {
