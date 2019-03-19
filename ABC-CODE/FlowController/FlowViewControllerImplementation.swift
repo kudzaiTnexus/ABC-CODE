@@ -10,12 +10,19 @@ import UIKit
 
 protocol FlowViewController {
     func pushToNavigationStack(viewController: UIViewController)
+    func getNavigationController() -> UINavigationController
 }
 
-class FlowViewControllerImplementation: UIViewController, FlowViewController {
+class FlowViewControllerImplementation: FlowViewController {
+    
+    let navigationController = UINavigationController()
 
     func pushToNavigationStack(viewController: UIViewController) {
-        self.navigationController?.pushViewController(viewController, animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
 
+    func getNavigationController() -> UINavigationController {
+        return navigationController
+    }
+    
 }

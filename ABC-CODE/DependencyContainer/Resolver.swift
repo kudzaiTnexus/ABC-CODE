@@ -15,7 +15,8 @@ public protocol Resolvable {
 }
 
 public protocol Registrable {
-    func register<T>(depedency: T.Type, implemenation: @escaping () -> T, objectScope: ObjectScope)
+    func register<T>(depedency: T.Type, implemenation: @escaping () -> T)
+    func registerSingleton<T>(depedency: T.Type, implemenation: @escaping () -> T)
 }
 
 public protocol Resolving {

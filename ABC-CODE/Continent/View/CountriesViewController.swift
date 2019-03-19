@@ -21,6 +21,7 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
     private var countryInfo = [CountryData]()
     private let continent: String
     
+    let flowController = Resolver.resolve(dependency: FlowViewController.self)
     private lazy var viewModel: ContinentCountriesViewModel = {
         let viewModelFactory = Resolver.resolve(dependency:ContinentCountriesViewModelFactory.self)
         return viewModelFactory.createViewModel(view: self, continent: continent)
@@ -125,7 +126,7 @@ class CountriesViewController: UIViewController, ViewCountriesView, UITableViewD
 //        viewModel.showCountryDetailedInfo(country: countryInfo[indexPath.row])
         
         let countryDetailsViewController = CountryViewController(countryDetails: countryInfo[indexPath.row])
-        self.navigationController?.pushViewController(countryDetailsViewController, animated: true)
+        flowController.pushToNavigationStack(viewController: countryDetailsViewController)
     }
     
 }

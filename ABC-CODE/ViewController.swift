@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emptyStringErrorLabel: UILabel!
     @IBOutlet weak var applicationEnvironmentButton: UIButton!
     
+    lazy var flowController = Resolver.resolve(dependency: FlowViewController.self)
+    
     private let reachAble: Reachability? = Reachability()
     
     override func viewDidLoad() {
@@ -76,7 +78,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func initiateNavigationFlow(continentName: String) {
         let countriesViewController = CountriesViewController(continent: continentName)
-        self.navigationController?.pushViewController(countriesViewController, animated: true)
+        flowController.pushToNavigationStack(viewController: countriesViewController)
     }
     
     func showNoInternetAlert(title: String, message: String) {

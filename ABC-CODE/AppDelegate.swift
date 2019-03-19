@@ -15,8 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+ 
         AppDependencies.registerAllApplicationDependencies()
+        
+        let flowController = Resolver.resolve(dependency: FlowViewController.self)
+        window?.rootViewController = flowController.getNavigationController()
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "initialScreenID") as? ViewController
+        flowController.pushToNavigationStack(viewController: vc ?? UIViewController())
         return true
     }
 
