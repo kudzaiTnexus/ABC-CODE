@@ -1,6 +1,6 @@
 # ABC-CODE
 
-ABC code is an application that gets infrmation about countries in different continents of the world. The applications shows my understanding of the following principles : 
+ABC code is an application that gets information about countries in different continents of the world. The applications shows my understanding of the following principles : 
 
 * Dependecny Injection
 * S.O.L.I.D Principles
